@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="GitHub,实验,自然语言处理," />
 
 
 
@@ -80,15 +80,16 @@
 
 
 
-<meta name="description" content="Coding &amp; Life">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天涯`小站">
-<meta property="og:url" content="http://yoursite.com/tags/尊严/index.html">
+<meta name="description" content="最近想到一个论文实验的point，打算动手搞起来。这里先占个坑，记录一下期间的问题和方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub-Research(一)">
+<meta property="og:url" content="http://yoursite.com/2016/05/24/GitHub-Research-一/index.html">
 <meta property="og:site_name" content="天涯`小站">
-<meta property="og:description" content="Coding &amp; Life">
+<meta property="og:description" content="最近想到一个论文实验的point，打算动手搞起来。这里先占个坑，记录一下期间的问题和方法。">
+<meta property="og:updated_time" content="2016-05-24T14:46:36.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天涯`小站">
-<meta name="twitter:description" content="Coding &amp; Life">
+<meta name="twitter:title" content="GitHub-Research(一)">
+<meta name="twitter:description" content="最近想到一个论文实验的point，打算动手搞起来。这里先占个坑，记录一下期间的问题和方法。">
 
 
 
@@ -106,7 +107,7 @@
   };
 </script>
 
-  <title> 标签: 尊严 | 天涯`小站 </title>
+  <title> GitHub-Research(一) | 天涯`小站 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <!----------- add Fork me on Github ------------>
@@ -251,46 +252,167 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        尊严
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                GitHub-Research(一)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-24T22:34:42+08:00" content="2016-05-24">
+              2016-05-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/24/GitHub-Research-一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/24/GitHub-Research-一/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/24/GitHub-Research-一/" class="leancloud_visitors" data-flag-title="GitHub-Research(一)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>最近想到一个论文实验的point，打算动手搞起来。这里先占个坑，记录一下期间的问题和方法。</p>
+<hr>
+<a id="more"></a>
+<h2 id="研究的问题"><a href="#研究的问题" class="headerlink" title="研究的问题"></a>研究的问题</h2><p>基于我平时使用GitHub时的一些感受，找到某一个repos之后，如果想看和这个repos相关的项目，并不能很容易的找到，网站没有提供相应的推荐。基于这个需求，我打算解决一下。在小数据范围内，给某一个repos，能够推荐出和它类似的一些top-repos。</p>
+<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p>网上能下载到少部分的GitHub数据，例如</p>
+<pre><code>GitHub Archive -- https://www.githubarchive.org/
+GHTorrent -- http://ghtorrent.org/
+</code></pre><p>但是它们提供的数据比较少。<br>感谢Microsoft公司，在实习时，他们进行的一个项目就是抓取GitHub上的全集（almost），我从数据库中拿出最top（根据fork/star/watch）的10W+个项目来进行分析。</p>
+<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>只考虑repos中的描述信息，将问题看成一个输入为短文本的自然语言处理问题，将描述中所有的专有名字都挑选出来，再去wikipedia中匹配</p>
 
-      <h1 class="post-title">
+      
+    </div>
+    
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/05/14/这个理由足够吗？/" itemprop="url">
-              
-                <span itemprop="name">这个理由足够吗？</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-14T23:23:59+08:00"
-              content="2016-05-14" >
-          05-14
-        </time>
-      </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
+          
+            <a href="/tags/实验/" rel="tag">#实验</a>
+          
+            <a href="/tags/自然语言处理/" rel="tag">#自然语言处理</a>
+          
+        </div>
+      
 
-    </header>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/24/C-爬虫相关/" rel="next" title="C#爬虫相关（一）">
+                <i class="fa fa-chevron-left"></i> C#爬虫相关（一）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -298,6 +420,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/24/GitHub-Research-一/"
+           data-title="GitHub-Research(一)" data-url="http://yoursite.com/2016/05/24/GitHub-Research-一/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -317,8 +447,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -415,6 +554,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#研究的问题"><span class="nav-number">1.</span> <span class="nav-text">研究的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据"><span class="nav-number">2.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预处理"><span class="nav-number">3.</span> <span class="nav-text">预处理</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -518,6 +668,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
